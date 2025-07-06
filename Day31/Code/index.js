@@ -1,6 +1,6 @@
 let prompt = require("prompt-sync")({ sigint: true });
 
-// let n = Number(prompt("Enter a number : "));
+let n = Number(prompt("Enter a number : "));
 
 // let sum = 0;
 
@@ -19,6 +19,29 @@ let prompt = require("prompt-sync")({ sigint: true });
 //     rev = (rev * 10) + rem;
 //     n = Math.floor(n/10)
 // }
+
+
+// // Check for Strong Number
+// let original = n;
+// let strong = 0;
+
+// while (n > 0) {
+//     let rem = n % 10;
+//     // Calculate factorial of rem
+//     let fact = 1;
+//     for (let i = 1; i <= rem; i++) {
+//         fact *= i;
+//     }
+//     strong += fact;
+//     n = Math.floor(n / 10);
+// }
+
+// if (strong === original) {
+//     console.log(original + " is a Strong number");
+// } else {
+//     console.log(original + " is not a Strong number");
+// }
+
 
 // console.log(rev); 
 
