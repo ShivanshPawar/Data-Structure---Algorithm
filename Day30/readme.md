@@ -1,6 +1,7 @@
 # 🦁 Sheryians Coding School Cohort – Day30 Learnings
 
 
+
 ## 🔁 For Loop Practice
 
 
@@ -233,6 +234,13 @@ Input: a = 2, b = 5 → Output: 2^5 = 32
 * Exponentiation through repetition.
 
 </details>
+
+
+---
+
+
+#### 🧑‍💻 Code : [Class-Code](Code/index.js)
+
 
 
 ---
