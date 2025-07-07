@@ -11,6 +11,7 @@ let n = Number(prompt("Enter a number : "))
 //     console.log();
 // }
 
+// get 60000 ascii code value
 // for(i=1;i<=60000;i++){
 //     process.stdout.write(String.fromCharCode(i+" "));
 // }
