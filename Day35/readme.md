@@ -176,6 +176,10 @@ console.log("Second Max =", secondMax); // Output: 8
 
 ---
 
+#### 🧑‍💻 Code : [Class-Code](Code/index.js)
+
+---
+
 
 # 📦 JavaScript Arrays – Complete Notes (Behavior, Methods, and Tricks)
 

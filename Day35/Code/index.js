@@ -52,17 +52,17 @@ let prompt = require("prompt-sync")({ sigint: true });
 
 
 
-// let arr = [50, 422, 123, 833, 343];
-// let max = -Infinity;
-// let secondMax = -Infinity;
+let arr = [50, 422, 123, 833, 343];
+let max = Math.max(arr[0],arr[1]);
+let secondMax = Math.min(arr[0],arr[1]);
 
-// for (let i = 0; i < arr.length; i++) {
-//     if (arr[i] > max) {
-//         secondMax = max;
-//         max = arr[i];
-//     } else if (arr[i] > secondMax && arr[i] !== max) {
-//         secondMax = arr[i];
-//     }
-// }
+for (let i = 0; i < arr.length; i++) {
+    if (arr[i] > max) {
+        secondMax = max;
+        max = arr[i];
+    } else if (arr[i] > secondMax && arr[i] !== max) {
+        secondMax = arr[i];
+    }
+}
 
-// console.log("Second Max =", secondMax); 
+console.log("Second Max =", secondMax); 
