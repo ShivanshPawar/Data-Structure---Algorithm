@@ -238,7 +238,6 @@ Output: -1
 
 > ⚠️ Works **only** on sorted arrays
 
-
 ---
 
 ### 🧑‍💻 Code : [Class-Code](Code/index.js)
