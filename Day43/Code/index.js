@@ -50,5 +50,24 @@ for (i = 0; i < arr.length; i++) {
 
 console.log(`left diagonal sum : ${leftSum} & right diagonal sum : ${rightSum}`);
 
+let array = new Array(4)
 
+for(let i = 0;i < array.length; i++){
+    let size = Number(prompt("Inner array's size : "))
+    array[i] = new Array(size)
+}
+
+for(let i = 0;i < array.length; i++){
+    for(let j = 0;j < array[i].length;j++){
+        array[i][j] = Number(prompt("Enter array Element : "))
+    } 
+}
+
+for(let i = 0;i < array.length; i++){
+    console.log(array[i]);
+}
+
+
+let arr1 = Array.from({length:3}, ()=> Array(4).fill(0));
+console.log(arr1);
 

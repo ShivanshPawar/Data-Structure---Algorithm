@@ -1,132 +1,149 @@
 # 🦁 Sheryians Coding School Cohort – Day43 Learnings
 
 
-## 🧩 Multi-Dimensional Arrays (2D Arrays)
+## 📦 Multi-Dimensional Arrays (2D Arrays)
 
 
-### 🔍 Concept Overview
+### 🔍 **Concept: Multi-Dimensional Arrays**
 
-A **2D array** is an array of arrays, used to store matrix-style data. Think of it like a grid of `rows` and `columns`.
+A **2D Array** in JavaScript is an array where each element itself is another array.
 
-```js
-let matrix = [
+Think of it like a **matrix** or a **grid**:
+
+```
+[
   [1, 2, 3],
   [4, 5, 6],
   [7, 8, 9]
-];
+]
+```
+
+Each inner array is a **row**, and each element in the inner array is a **column** value.
+
+---
+
+## 🧾 Topics Covered
+
+
+### ✅ 1. Matrix Creation (Fixed Size)
+
+**Logic:**
+
+* You can create a square matrix (like 3x3 or 4x4) by nesting loops.
+* Each row is an array, and each column value can be filled dynamically.
+
+**Example:**
+
+* For size = 3:
+
+```
+[
+ [23, 11, 45],
+ [56, 67, 89],
+ [12, 10, 33]
+]
 ```
 
 ---
 
-## ✅ Questions
+### ✅ 2. Printing a Matrix
+
+**Logic:**
+
+* To access each value in a 2D array, you need **two loops**:
+
+  * Outer loop → each row.
+  * Inner loop → each element in the row.
+
+**Output Format:**
+
+```
+23 11 45
+56 67 89
+12 10 33
+```
 
 ---
 
-<details>
-<summary><strong>Q51. 1572. Matrix Diagonal Sum</strong></summary>
+### ✅ 3. Diagonal Sums in a Square Matrix
 
-### 🧠 Logic:
+**📌 Primary Diagonal (↘):**
 
-* Primary diagonal: `matrix[i][i]`
-* Secondary diagonal: `matrix[i][n - i - 1]`
-* Avoid double counting middle element in odd-sized matrix.
+* Elements like: `[0][0], [1][1], [2][2]...`
+* Rule: `i === j`
 
-### 🔢 Input:
+**📌 Secondary Diagonal (↙):**
 
-```js
-[[1,2,3],
- [4,5,6],
- [7,8,9]]
-```
+* Elements like: `[0][2], [1][1], [2][0]` in a 3x3
+* Rule: `i + j === size - 1`
 
-### 🎯 Output:
+**Example:**
 
 ```
-25 (1 + 5 + 9 + 3 + 7)
-```
+Matrix:
+[1, 2, 3]
+[4, 5, 6]
+[7, 8, 9]
 
-</details>
+Left Diagonal = 1 + 5 + 9 = 15
+Right Diagonal = 3 + 5 + 7 = 15
+```
 
 ---
 
-<details>
-<summary><strong>Q52. 867. Transpose Matrix</strong></summary>
+### ✅ 4. Matrix with Different Row Sizes (Jagged Array)
 
-### 🧠 Logic:
+**Logic:**
 
-* Transpose of matrix flips it over its diagonal.
-* `result[col][row] = matrix[row][col]`
+* Not all rows need to have the same length.
+* You can create rows with varying numbers of columns.
+* Useful when representing ragged or triangular data.
 
-### 🔢 Input:
+**Example:**
 
-```js
-[[1,2,3],
- [4,5,6]]
 ```
-
-### 🎯 Output:
-
-```js
-[[1,4],
- [2,5],
- [3,6]]
+[
+ [1, 2, 3],
+ [4, 5],
+ [6, 7, 8, 9]
+]
 ```
-
-</details>
 
 ---
 
-<details>
-<summary><strong>Q53. 48. Rotate Image</strong></summary>
+### ✅ 5. Accepting Matrix from User (Dynamic)
 
-### 🧠 Logic:
+**Logic:**
 
-* **Transpose + Reverse Rows** = 90° clockwise rotation.
-* **In-place** manipulation required (no extra matrix).
+* Take user input for:
 
-### 🔢 Input:
-
-```js
-[[1,2,3],
- [4,5,6],
- [7,8,9]]
-```
-
-### 🎯 Output:
-
-```js
-[[7,4,1],
- [8,5,2],
- [9,6,3]]
-```
-
-</details>
+  * Size of outer array
+  * Size of each inner array
+  * Values to be inserted
+* You dynamically create arrays and insert data manually.
 
 ---
 
-<details>
-<summary><strong>Q54. 54. Spiral Matrix</strong></summary>
+### ✅ 6. Array from Factory (Pre-filled)
 
-### 🧠 Logic:
+**Logic:**
 
-* Traverse boundaries: top → right → bottom → left.
-* Use 4 pointers: `top`, `bottom`, `left`, `right` and loop until they collapse.
+* JavaScript provides `Array.from()` with mapping function to generate a 2D array.
+* This is useful when you need default or placeholder values.
 
-### 🔢 Input:
-
-```js
-[[1,2,3],
- [4,5,6],
- [7,8,9]]
-```
-
-### 🎯 Output:
+**Example:**
 
 ```
-[1,2,3,6,9,8,7,4,5]
+3 rows, 4 columns filled with zeroes:
+[
+ [0, 0, 0, 0],
+ [0, 0, 0, 0],
+ [0, 0, 0, 0]
+]
 ```
 
-</details>
+---
+
 
 ### 🧑‍💻 Code : [Class-Code](Code/index.js)
 
