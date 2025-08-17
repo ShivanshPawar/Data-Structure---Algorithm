@@ -1,5 +1,6 @@
 prompt = require('prompt-sync')({ sigint: true });
 
+//  Q 57. Pallindromic String using Two pointer algorithm (hint: Array reverse algo)
 // Two pointer algorithms for palindrome
 // let s = prompt("Enter a String : ");
 // let isPalindrome = true;
@@ -75,4 +76,4 @@ for(let i=0;i<arrStr.length;i++){
     }
 }
 
-console.log(ans)
+console.log(ans);

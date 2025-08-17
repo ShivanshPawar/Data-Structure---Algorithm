@@ -64,13 +64,15 @@ prompt = require('prompt-sync')({sigint:true});
 
 
 
-
+// Traverse Each Character of a String
 
 let str = prompt("Enter a string : ");
 
 for(let i=0;i<str.length;i++){
     console.log(str[i]);
 }
+
+// Reverse a String
 
 let revStr = "";
 for(let i=str.length;i>=0;i--){

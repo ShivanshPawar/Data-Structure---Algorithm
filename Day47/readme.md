@@ -246,14 +246,90 @@ console.log(str.charCodeAt(0));  // Output: 65
 
 ---
 
-## 🎯 Real-World Examples
 
-* ✅ Validating input: `.trim()` to remove unwanted spaces.
-* 🔍 Searching in strings: `.includes()` or `.indexOf()`
-* 🛠️ Formatting: `.toUpperCase()` for uppercase names
-* 🗂️ Parsing data: `.split(',')` for CSV values
+# 🔹 Q 55: Traverse Each Character of a String
+
+### 📝 Problem
+
+Given a string, print each character on a new line.
+
+### 💡 Concept
+
+* Strings in JavaScript are **array-like** (can access using index `str[i]`).
+* Looping allows us to process each character individually.
+
+### ⚙️ Logic
+
+1. Take input string `str`.
+2. Loop from `i = 0` to `str.length-1`.
+3. Print `str[i]` in each iteration.
+
+### 🔄 Dry Run (Input: `"abc"`)
+
+* i=0 → `a`
+* i=1 → `b`
+* i=2 → `c`
+
+👉 Output:
+
+```
+a  
+b  
+c
+```
+
+### 📊 Complexity
+
+* **Time:** `O(n)` → loop runs for all characters.
+* **Space:** `O(1)` → no extra storage.
 
 ---
+
+# 🔹 Q 55: Reverse a String
+
+### 📝 Problem
+
+Reverse a given string using iteration.
+
+### 💡 Concept
+
+* A string is immutable in JS → can’t modify directly.
+* Need to build a new string (`revStr`).
+* Traverse from **end → start** and append characters.
+
+### ⚙️ Logic
+
+1. Initialize `revStr = ""`.
+2. Start loop `i = str.length - 1` → `0`.
+3. At each step, append `str.charAt(i)` to `revStr`.
+4. Print final reversed string.
+
+### 🔄 Dry Run (Input: `"abc"`)
+
+* i=2 → `c` → revStr = `"c"`
+* i=1 → `b` → revStr = `"cb"`
+* i=0 → `a` → revStr = `"cba"`
+
+👉 Output: `"cba"`
+
+⚠️ Note: In your code you used
+
+```js
+for (let i = str.length; i >= 0; i--) 
+```
+
+It starts from `str.length` (which is **out of bound**) → first `charAt()` gives `""`.
+Correct would be:
+
+```js
+for (let i = str.length - 1; i >= 0; i--) 
+```
+
+### 📊 Complexity
+
+* **Time:** `O(n)` → each char visited once.
+* **Space:** `O(n)` → new reversed string created.
+
 
 ### 🧑‍💻 Code : [Class-Code](Code/index.js)
 
